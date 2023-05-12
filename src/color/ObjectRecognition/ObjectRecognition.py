@@ -1,13 +1,10 @@
-
-
 import os
-
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
 import pyrealsense2 as rs
 import numpy as np
 import cv2
 import tensorflow as tf
-
 
 class ObjectDetector:
     def __init__(self, model_path, confidence_threshold=0.7):
@@ -146,8 +143,6 @@ class ObjectDetector:
                 cv2.putText(image, label, (left, top - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
         return image
 
-
-
 class RealSenseCamera:
     def __init__(self, width=1280, height=720, fps=30):
         self.pipeline = rs.pipeline()
@@ -166,7 +161,7 @@ class RealSenseCamera:
 
 
 if __name__ == '__main__':
-    model_path = "../ssd_mobilenet_v2_coco_2018_03_29/frozen_inference_graph.pb"
+    model_path = "../../../ssd_mobilenet_v2_coco_2018_03_29/frozen_inference_graph.pb"
     object_detector = ObjectDetector(model_path)
     camera = RealSenseCamera()
     while True:
