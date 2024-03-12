@@ -1,5 +1,5 @@
 # Object Detection and Recognition using RealSense camera
-This Python script provides functionalities for object detection and recognition using the RealSense camera and TensorFlow Object Detection API. <br>
+This Python script provides functionalities for object detection and recognition using the RealSense camera and TensorFlow Object Detection API.
 It detects various objects in the image and displays the label of the detected objects on the video stream.
 
 ## Dependences
